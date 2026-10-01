@@ -1,0 +1,6 @@
+{
+  "name": "Kitabah Insya'",
+  "description": "Progressive Web App pembelajaran menulis karangan bahasa Arab (Insya' Muwajjah) dengan Mode KBM Terbimbing dan Mode Latihan Mandiri interaktif didukung Asisten AI, kanvas khat digital, dan evaluasi rubrik analitis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

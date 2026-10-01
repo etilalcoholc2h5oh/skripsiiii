@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and role",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "teacher", "admin"] },
+        "fullName": { "type": "string", "maxLength": 100 },
+        "avatarUrl": { "type": "string" },
+        "institution": { "type": "string", "maxLength": 150 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "role", "fullName"]
+    },
+    "Class": {
+      "title": "Class",
+      "description": "Class session",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "teacherId": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 },
+        "code": { "type": "string", "maxLength": 20 },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "teacherId", "name", "code"]
+    },
+    "Draft": {
+      "title": "Draft",
+      "description": "Student writing draft version",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "writingSessionId": { "type": "string" },
+        "version": { "type": "integer" },
+        "content": { "type": "string", "maxLength": 10000 },
+        "wordCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["id", "writingSessionId", "version", "content"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles"
+    },
+    "/classes/{classId}": {
+      "schema": { "$ref": "#/entities/Class" },
+      "description": "Classes created by teachers"
+    },
+    "/drafts/{draftId}": {
+      "schema": { "$ref": "#/entities/Draft" },
+      "description": "Append-only writing drafts"
+    }
+  }
+}
