@@ -1,0 +1,32 @@
+{
+  "short_name": "Kitabah Touch",
+  "name": "Kitabah Touch - Maharah Kitabah Arabic Trainer",
+  "description": "Progressive Web App to train Arabic writing (Maharah Kitabah) for Madrasah Aliyah students with tactile drawing slate and elegant typography.",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&q=80&w=192&h=192",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&q=80&w=512&h=512",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&q=80&w=512&h=512",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["education", "utilities"],
+  "lang": "id"
+}
