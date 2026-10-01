@@ -129,14 +129,6 @@ export default function App() {
             >
               {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
-            
-            <button 
-              onClick={() => setShowSettings(true)} 
-              className="p-1.5 sm:p-2 text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-white rounded-lg transition-colors"
-              title="Pengaturan Kunci API"
-            >
-              <Settings className="w-4 h-4" />
-            </button>
           </div>
         </div>
       </header>
